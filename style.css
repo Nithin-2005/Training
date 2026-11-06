@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #1b1b1b;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: #ff3030;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+select, input {
+    padding: 12px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        90deg, #270000, #650000, #151515
+    );
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff3030;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 15px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+section {
+    padding: 45px 5%;
+}
+
+section h2 {
+    margin-bottom: 25px;
+    color: #ff4545;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.movie-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.movie-card h3, .movie-card p {
+    padding: 8px 12px;
+}
+
+.movie-card button {
+    margin: 10px 12px;
+}
+
+#booking, #payment {
+    background: #191919;
+    margin: 20px 5%;
+    border-radius: 12px;
+}
+
+.screen {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 25px auto;
+    max-width: 450px;
+    border-radius: 50% 50% 5px 5px;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(8, 38px);
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.seat {
+    background: #555;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background: #20c878;
+}
+
+.seat.booked {
+    background: #d32f2f;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+#ticket {
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    line-height: 2;
+}
+
+footer {
+    background: #222;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(8, 30px);
+        gap: 5px;
+    }
+}
